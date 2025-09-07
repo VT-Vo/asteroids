@@ -42,6 +42,10 @@ def main():
             if(a.check_collision(player)):
                 print("Game over!")
                 return
+            for s in shots:
+                if(s.check_collision(a)):
+                    s.kill()
+                    a.kill()
 
         screen.fill((0, 0, 0))
 
